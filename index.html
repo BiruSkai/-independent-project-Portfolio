@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <title>Portfolio</title>
+</head>
+<body id="body">
+        <header>
+                <nav>
+                        <img src="./images/BS.png" alt="my logo">
+                        <div>
+                                <button id="theme-switcher">Theme</button>
+                                <div id="themeOption">
+
+                                        <button id="dark">Dark</button>
+                                        <button id="light">Light</button>
+                                </div>
+                        </div>
+                        <ul id="nav-list">
+                                <li><a href="#body">Home</a></li>
+                                <li><a href="#about-me">About Me</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div id="container-profile">
+                        <section id="profile">
+                                <h1>
+                                <span id="profile-intro">My name is</span><br>
+                                <span id="profile-name">Nikolaus Albert</span><br>
+                                <span id ="biruskai">-Biru Skai-</span><br>
+                                <span id="profile-profession">Software Engineer</span>
+                                </h1>
+                        </section> 
+                </div>
+                <section id="container-about-me">
+                        <h2 id="about-me">About me</h2>
+                        <p id="about-me-text">My primary and secondary education were in Indonesia. Following this, I studied human medicine in Germany. 
+                                After working five years in healthcare sector, I decided to make a career change into computational language.
+                                Hence, I am taking a full stack software engineer path course in codeacademy. I reason my decision as this
+                                path offers freedom of geographical working place, a decent financial income and an increasing need of
+                                software engineer in many regions globally. I am motivated to improve my professional skill and deliver 
+                                the best service.
+                        </p>
+                </section>
+                <section id="container-projects">
+                        <h2 id="projects">Projects</h2>
+                        <div id="container-project-item">
+                                <div class="project-item">
+                                        <img src="./images/Project1.png" alt="Project1, TrustSolar Website, flexbox">
+                                        <h4>Flexbox Webdesign</h4>
+                                        <hr>
+                                        <p>A project from codeacademy. <a href="https://github.com/BiruSkai/codeacademy-projects/tree/main/Trust%20Solar"
+                                                target="_blank">Link</a> to see this project.</p>
+                                        <p>Skill: HTML, CSS</p>
+                                </div>
+                                <div class="project-item">
+                                        <img src="./images/Project2.png" alt="Project2, Piano Player, DOM event">
+                                        <h4>Java script DOM event</h4>
+                                        <hr>   
+                                        <p>Online project from codeacademy.</p>
+                                </div>
+                                <div class="project-item">
+                                        <img src="./images/Project3.png" alt="Project3, Mc Health Website, Grid, Flexbox, Responsive design">
+                                        <h4>Responsive Design</h4>
+                                        <hr>
+                                        <p>A project from codeacademy. <a href="https://github.com/BiruSkai/codeacademy-projects/tree/main/Mc%20Health"
+                                                target="-blank">Link</a> to see this project.</p>
+                                </div>
+                                <div class="project-item" id="fortune-button">
+                                        <img src="./images/fortune.png" alt="Fortune teller, JS Project">
+                                        <h4>Fortune Teller</h4>
+                                        <hr>
+                                        <p>Me:</p>
+                                        <p id="askFortune">Hello, click me to get your fortune</p>
+                                        <hr>
+                                        <p id="fortuneHead"></p>
+                                        <p id="fortune-message"></p>
+                                </div>
+                        </div>
+                </section>
+                <section id="container-skills">
+                        <h2 id="skills">Coding Skills</h2>
+                        <div id="containerGridSkills">
+                                <div class="skills-item" id="a">
+                                                <img src="./images/html.png" alt="HTML logo">
+                                                <p>Level: Intermediate</p>
+                                </div>
+                                <div class="skills-item" id="b">
+                                        <img src="./images/css.png" alt="CSS logo">
+                                        <p>Level: Intermediate</p>
+                                </div>
+                                <div class="skills-item" id="c">
+                                        <img src="./images/JS.png" alt="Java script logo">
+                                        <p>Level: Basic</p>
+                                </div>
+                                <div class="skills-item" id="d">
+                                        <img src="./images/git n github.png" alt="Git and github logo">
+                                        <p>Level: Basic</p>
+                                </div>
+                        </div>
+                </section>
+                <section id="container-contact">
+                        <div id="contact-container1">
+                                <h2 id="contact">Contact</h2>
+                                <p>For interest on hiring my skills, fill and send the following field. I will respond soon.</p>
+                        </div>
+                        <form id="contact-container2" action="" method="POST">
+                                <div id="contact-fullname">
+                                        <label for="name">Full Name: </label>
+                                        <input type="text" id="name" name="name"  required>
+                                        <span class="warn"></span>
+                                </div>
+                                <div id="contact-email-etc">
+                                        <div id="form-email">
+                                                <label for="email">Email:</label>
+                                                <input type="text" id="email" name="email" size= 33% required>
+                                                <span class="warn"></span>
+                                        </div>
+                                        <div>
+                                                <label for="phone">Phone Number:</label>
+                                                <input type="text" id="phone" name="phone" size= 25% required>
+                                                <span class="warn"></span>
+                                        </div>
+                                        <div id="form-country">
+                                                <label for="country">Country:</label>
+                                                <input type="text" id="country" name="country" size= "28%" required>
+                                                <span class="warn"></span>
+                                        </div>
+                                </div>
+                                <fieldset id="contact-checkbox" required>
+                                        <legend>Topic:</legend>
+                                        <div>
+                                                <input type="checkbox" id="position" name="position">
+                                                <label for="position">Offering a vacancy.</label>
+                                        </div>
+                                        <div>
+                                                <input type="checkbox" id="project" name="project">
+                                                <label for="project">Offering a project</label>
+                                        </div>
+                                        <div>
+                                                <input type="checkbox" id="other" name="other">
+                                                <label for="other">Other</label>
+                                                <span id="topic-other"></span>
+                                        </div>
+                                </fieldset>
+                                <div id="message">
+                                        <label for="message">Message:</label>
+                                        <textarea id="message" name="message" rows="8" required></textarea>
+                                </div>
+                                <input type="submit" value="Submit" id="contact-submit">
+                        </form>
+                </section>
+        </main>
+        <footer>
+                <div class="footer-item">
+                        <span>Nikolaus Albert-Biru Skai- &copy; 2023</span>
+                </div>
+                <div class="footer-item" id="socialmedia">
+                        <span id="follow">Follow: </span>
+                        <span>
+                                <a href="https://github.com/BiruSkai" target="_blank"><img src="./images/github.png" alt="github logo" title="github"></a>
+                                <a href="https://www.facebook.com/nikolaus.albert.007" target="_blank"><img src="./images/fb.png" alt="facebook logo" title="facebook"></a>
+                                <a href="https://www.youtube.com/@dannyben0/" target="_blank"><img src="./images/utube.png" alt="youtube logo" title="youtube"></a>
+                        </span>
+                </div>
+        </footer>
+
+        <script src="./index.js"></script>
+</body>
+</html>

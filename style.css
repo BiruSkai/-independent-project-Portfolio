@@ -1,0 +1,315 @@
+html{
+        letter-spacing: 0.7px;
+        line-height: 1.5rem;
+        font-family: 'Lora', serif;
+}
+
+body{
+        margin: 0;
+}
+
+
+/*Header*/
+nav{
+        background-color: rgba(5, 5, 106, 0.8);
+        color: white;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 5.5rem;
+        top: 0;
+        z-index: 1;
+        margin: 0;
+}
+
+nav ul {
+        display: flex;
+        list-style: none;
+        margin-right: 1rem;
+}
+
+nav ul li a{
+        text-decoration: none;
+        color: white;
+}
+
+nav ul li a:hover{
+        text-decoration: underline;
+        color: greenyellow;
+}
+
+nav ul li a:active {
+        font-size: larger;
+        font-weight: bolder;
+}
+
+nav ul li{
+        margin: auto 1rem;
+        text-decoration: none;
+}
+
+nav img{
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: auto 2rem;
+        border-radius: 70%;
+}
+
+#theme-switcher, #dark, #light{
+        padding: 0.6rem;
+        width: 5rem;
+        font-weight: 800;
+} 
+
+#dark{
+        background-color: black;
+        color:white;
+}
+
+#light{
+        background-color: white;
+        color: black;
+}
+
+/*Main*/
+/*About Me*/
+#container-profile{
+        margin-top: 5.5rem;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/matrix.png");
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 2rem;
+        opacity: 0.9;
+        height: 17rem;
+        background-size: cover;
+}
+
+#profile h1{
+        letter-spacing: 0.4rem;
+        font-weight: 800;
+        mix-blend-mode: difference;
+        padding-bottom: 1rem;
+}
+
+#profile-intro{
+        position: absolute;
+        left: 28rem;
+}
+
+#profile-name{
+        position: absolute;
+        left: 37rem;
+}
+
+#biruskai{
+        position:absolute;
+        left: 41rem;
+        font-size: 1rem;
+}
+
+#profile-profession{
+        position: absolute;
+        right: 29rem;
+}
+
+#container-about-me{
+        background-color: azure;
+}
+
+#about-me{
+        margin-top: 0;
+        padding-top: 2rem;
+        text-align: center;
+}
+
+#about-me-text{
+        text-align: justify;
+        width: auto;
+        padding: 2rem;
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 2.0rem;
+}
+
+/*Project*/
+#container-projects{
+        padding: 2rem;
+        background-color:honeydew;
+        color:
+}
+
+#projects{
+        margin:0;
+        padding: 2rem;
+        text-align: center;
+}
+
+#container-project-item{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+}
+
+.project-item{
+        text-align: center;
+        width: 23rem;
+        border-style: solid;
+        margin: 2rem;
+}
+
+.project-item:hover{
+        background-color: rgba(210, 246, 68, 0.7);
+        box-shadow: 60px -16px rgb(207, 93, 68);
+}
+
+.project-item img{
+        height: auto;
+        width: 23rem;
+}
+
+.project-item p{
+        padding: 0 1rem;
+        
+}
+
+/*Skills*/
+#container-skills{
+        color:white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/matrix.jpg);
+}
+
+#skills{
+        text-align: center;
+        padding: 2rem;
+}
+
+#containerGridSkills{
+        display: inline-grid;
+        grid-template-rows: auto; 
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+}
+
+#a,#b,#c,#d,#e {
+        width: 10rem;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 2rem;
+        font-weight: bolder;
+}
+
+.skills-item img{
+        width: auto;
+}
+
+/*Contact*/
+#container-contact{
+        margin: 0 auto;
+        padding: 2rem 25rem;
+}
+
+#contact-container1{
+        text-align: center;
+}
+
+#contact{
+        margin: 0;
+        padding: 2rem;
+}
+
+#contact-container2{
+        line-height: 2.5;
+}
+
+#contact-fullname{
+        padding: 0 1rem;
+}
+
+#name{
+        width:-webkit-fill-available;
+}
+
+#contact-email-etc{
+        padding: 0 1rem;
+        display: inline-flex;
+        
+}
+
+#form-email{
+        margin-right: 0.6rem;
+}
+
+#contact-checkbox{
+        border: none;
+}
+
+#message{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+}
+
+#name, #email, #phone, #country{
+        padding: 0.5rem 0;
+}
+
+#contact-submit{
+        padding: 0.8rem 1rem;
+        margin: 1rem;
+        background-color: rgb(98, 214, 39);
+        color: white;
+        border-style: none;
+        
+}
+
+#contact-submit:hover{
+        cursor: pointer;
+        font-size: larger;
+}
+
+/*Footer*/
+footer{
+        background-color: black;
+        width: 100%;
+        height: 6rem;
+        margin:0;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+}
+
+.footer-item{
+        display: flex;
+        align-items: center;
+        padding-left: 3rem;
+}
+
+footer img{
+        height: 3rem;
+        width: 3rem;
+        border-radius: 70%;
+        padding: 0 0.6rem;
+}
+
+
+#socialmedia{
+        position: relative;
+        left: 14rem;
+
+}
+#follow{
+        margin: 0 1rem;
+}
