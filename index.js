@@ -104,6 +104,7 @@ themeOption.hidden = true;
 themeSwitcher.onclick = function() {
         themeSwitcher.hidden = true;
         themeOption.hidden = false;
+        light.hidden = true;
         themeOption.style.display = "flex";
         themeOption.style.flexDirection = "row";
 }
