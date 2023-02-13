@@ -12,39 +12,75 @@
 <body id="body">
         <header>
                 <nav>
-                        <img src="./images/BS.png" alt="my logo">
-                        <div>
-                                <button id="theme-switcher">Theme</button>
-                                <div id="themeOption">
-                                        <button id="dark">
-                                                <span class="material-symbols-outlined">dark_mode</span>
-                                                Dark
-                                        </button>
-                                        <button id="light">
-                                                <span class="material-symbols-outlined">light_mode</span>
-                                                Light
-                                        </button>
-                                </div>
+                        <div id="logoSwitch">
+                                <img src="./images/BS.png" alt="my logo">
+                                <button id="dark">
+                                        <span class="material-symbols-outlined">dark_mode</span>
+                                        Dark
+                                </button>
+                                <button id="light">
+                                        <span class="material-symbols-outlined">light_mode</span>
+                                        Light
+                                </button>       
                         </div>
                         <ul id="nav-list">
-                                <li><a href="#body">Home</a></li>
+                                <li><a href="#body" id="home">Home</a></li>
                                 <li><a href="#about-me">About Me</a></li>
                                 <li><a href="#projects">Projects</a></li>
                                 <li><a href="#skills">Skills</a></li>
                                 <li><a href="#contact">Contact</a></li>
                         </ul>
                 </nav>
+                <!--768pxdown-->
+                <nav id="extr1-nav">
+                        <span class="material-symbols-outlined" id="menu">menu</span>
+                        <div id="mobile-modeSwitch">
+                                <button id="mobile-dark">
+                                        <span class="material-symbols-outlined">dark_mode</span>
+                                </button>
+                                <button id="mobile-light">
+                                        <span class="material-symbols-outlined">light_mode</span>
+                                </button>       
+                        </div>
+                        <div id="mobile-navList">
+                                <ul>
+                                        <li><a href="#about-me"><span class="material-symbols-outlined">
+                                                timeline
+                                                </span></a></li>
+                                        <li><a href="#projects"><span class="material-symbols-outlined">
+                                                work_history
+                                                </span></a></li>
+                                        <li><a href="#skills"><span class="material-symbols-outlined">
+                                                code
+                                                </span></a></li>
+                                        <li><a href="#contact"><span class="material-symbols-outlined">
+                                                contact_page
+                                                </span></a></li>
+                                </ul>
+                        </div>
+                </nav>
+                <!--End-768pxdown-->                      
         </header>
         <main>
                 <div id="container-profile">
                         <section id="profile">
                                 <h1>
-                                <span id="profile-intro">My name is</span><br>
-                                <span id="profile-name">Nikolaus Albert</span><br>
-                                <span id ="biruskai">-Biru Skai-</span><br>
-                                <span id="profile-profession">Software Engineer</span>
+                                <span id="profile-intro" class="profileData">My name is</span><br>
+                                <span id="profile-name" class="profileData">&emsp;&emsp;&emsp;&emsp;&emsp;Nikolaus Albert</span><br>
+                                <span id ="biruskai" class="profileData">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Biru Skai-</span><br>
+                                <span id="profile-profession" class="profileData">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Software Engineer</span>
                                 </h1>
                         </section> 
+                        <!--1036px down-->
+                        <section id="extr1-profile">
+                                <h1>
+                                <span>My name is</span><br>
+                                <span>Nikolaus Albert</span><br>
+                                <span>-Biru Skai-</span><br>
+                                <span>Software Engineer</span>
+                                </h1>
+                        </section> 
+                        <!--End-1036px down-->
                 </div>
                 <section id="container-about-me">
                         <h2 id="about-me">About me</h2>
@@ -118,34 +154,34 @@
                                 <h2 id="contact">Contact</h2>
                                 <p>For interest on hiring my skills, fill and send the following field. I will respond soon.</p>
                         </div>
-                        <form id="contact-container2" action="" method="POST">
+                        <form id="contact-container2" action="mailto:" method="POST">
                                 <div id="contact-fullname">
                                         <label for="name">Full Name: </label>
                                         <input type="text" id="name" name="name"  required>
                                         <span class="warn"></span>
                                 </div>
                                 <div id="contact-email-etc">
-                                        <div id="form-email">
+                                        <div id="form-email" class="contactData">
                                                 <label for="email">Email:</label>
-                                                <input type="text" id="email" name="email" size= 33% required>
+                                                <input type="text" id="email" name="email"  required>
                                                 <span class="warn"></span>
                                         </div>
-                                        <div>
+                                        <div class="contactData">
                                                 <label for="phone">Phone Number:</label>
-                                                <input type="text" id="phone" name="phone" size= 25% required>
+                                                <input type="text" id="phone" name="phone"  required>
                                                 <span class="warn"></span>
                                         </div>
-                                        <div id="form-country">
+                                        <div id="form-country" class="contactData">
                                                 <label for="country">Country:</label>
-                                                <input type="text" id="country" name="country" size= "28%" required>
+                                                <input type="text" id="country" name="country" required>
                                                 <span class="warn"></span>
                                         </div>
                                 </div>
                                 <fieldset id="contact-checkbox" required>
                                         <legend>Topic:</legend>
                                         <div>
-                                                <input type="checkbox" id="position" name="position">
-                                                <label for="position">Offering a vacancy.</label>
+                                                <input type="checkbox" id="vacancy" name="vacancy">
+                                                <label for="vacancy">Offering a vacancy.</label>
                                         </div>
                                         <div>
                                                 <input type="checkbox" id="project" name="project">
@@ -166,19 +202,34 @@
                 </section>
         </main>
         <footer>
-                <div class="footer-item">
-                        <span>Nikolaus Albert-Biru Skai- &copy; 2023</span>
+                <div id="containerFooter">
+                        <div id="copyright">
+                                <span>Nikolaus Albert-Biru Skai- &copy; 2023</span>
+                        </div>
+                        <div id="socialmedia">
+                                <span id="follow">Follow: </span>
+                                <span>
+                                        <a href="https://github.com/BiruSkai" target="_blank"><img src="./images/github.png" alt="github logo" title="github"></a>
+                                        <a href="https://www.facebook.com/nikolaus.albert.007" target="_blank"><img src="./images/fb.png" alt="facebook logo" title="facebook"></a>
+                                        <a href="https://www.youtube.com/@dannyben0/" target="_blank"><img src="./images/utube.png" alt="youtube logo" title="youtube"></a>
+                                </span>
+                        </div>
                 </div>
-                <div class="footer-item" id="socialmedia">
-                        <span id="follow">Follow: </span>
-                        <span>
-                                <a href="https://github.com/BiruSkai" target="_blank"><img src="./images/github.png" alt="github logo" title="github"></a>
-                                <a href="https://www.facebook.com/nikolaus.albert.007" target="_blank"><img src="./images/fb.png" alt="facebook logo" title="facebook"></a>
-                                <a href="https://www.youtube.com/@dannyben0/" target="_blank"><img src="./images/utube.png" alt="youtube logo" title="youtube"></a>
-                        </span>
-                </div>
+                <!--976pxdown-->
+                <div id="extr1-containerFooter">
+                        <div id="extr1-socialmedia">
+                                <span>
+                                        <a href="https://github.com/BiruSkai" target="_blank"><img src="./images/github.png" alt="github logo" title="github"></a>
+                                        <a href="https://www.facebook.com/nikolaus.albert.007" target="_blank"><img src="./images/fb.png" alt="facebook logo" title="facebook"></a>
+                                        <a href="https://www.youtube.com/@dannyben0/" target="_blank"><img src="./images/utube.png" alt="youtube logo" title="youtube"></a>
+                                </span>
+                        </div>
+                        <div>
+                                <span>Nikolaus Albert-Biru Skai- &copy; 2023</span>
+                        </div>
+                </div>        
+                <!--End-976pxdown-->
         </footer>
-
         <script src="./index.js"></script>
 </body>
 </html>

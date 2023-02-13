@@ -91,29 +91,24 @@ button.onclick = function() {
 
 //Theme color
 let body = document.getElementById("body");
-let aboutMeContainer = document.getElementById("container-about-me")
-let projectsContainer = document.getElementById("container-projects")
-let contactContainer = document.getElementById("container-contact")
-let themeSwitcher = document.getElementById("theme-switcher")
+let profileContainer = document.getElementById("container-profile");
+let aboutMeContainer = document.getElementById("container-about-me");
+let projectsContainer = document.getElementById("container-projects");
+let contactContainer = document.getElementById("container-contact");
 let dark = document.getElementById("dark");
 let light = document.getElementById("light");
-let themeOption = document.getElementById("themeOption");
 
-themeOption.hidden = true;
+light.hidden = true;
 
-themeSwitcher.onclick = function() {
-        themeSwitcher.hidden = true;
-        themeOption.hidden = false;
-        light.hidden = true;
-        themeOption.style.display = "flex";
-        themeOption.style.flexDirection = "row";
-}
-
-dark.onclick = function() {
-        themeOption.hidden = false;
+dark.onclick = function() {  
         dark.hidden = true;
         light.hidden = false;
         body.style.backgroundColor = "black";
+        profileContainer.style.background = "url(./images/nightsky.jpg)";
+        profileContainer.style.backgroundRepeat = "no-repeat";
+        profileContainer.style.backgroundSize = "cover";
+        profileContainer.style.backgroundPosition = "left 15% top 25%";
+        profileContainer.style.color = "hotpink";
         aboutMeContainer.style.backgroundColor = "rgba(5, 5, 106, 0.8)";
         projectsContainer.style.backgroundColor = "black";
         contactContainer.style.backgroundColor = "rgba(5, 5, 106, 0.8)";   
@@ -121,13 +116,73 @@ dark.onclick = function() {
 }
 
 light.onclick = function() {
-        themeOption.hidden = false;
         dark.hidden = false;
         light.hidden = true;
         body.style.backgroundColor = "";
+        profileContainer.style.backgroundImage = "";
+        profileContainer.style.backgroundRepeat = "";
+        profileContainer.style.backgroundSize = "";
+        profileContainer.style.color = "";
         aboutMeContainer.style.backgroundColor = "";
         projectsContainer.style.backgroundColor = "";
         contactContainer.style.backgroundColor = ""; 
         body.style.color = "";
 }
+
+
+//Mobile navigation
+let menu = document.getElementById("menu");
+let mModeSwitch = document.getElementById("mobile-modeSwitch");
+let mNavList = document.getElementById("mobile-navList");
+
+mModeSwitch.hidden = true;
+mNavList.hidden = true;
+
+
+menu.onclick = function () {
+        menu.hidden = true;
+        mModeSwitch.hidden = false;
+        mNavList.hidden = false;
+}
+
+mNavList.onclick = function () {
+        menu.hidden = false;
+        mModeSwitch.hidden = true;
+        mNavList.hidden = true;
+}
+
+let mDark = document.getElementById("mobile-dark");
+let mLight = document.getElementById("mobile-light");
+
+mDark.onclick = function () {
+        mNavList.hidden = true;
+        mModeSwitch.hidden = true;
+        body.style.backgroundColor = "black";
+        profileContainer.style.background = "url(./images/nightsky.jpg)";
+        profileContainer.style.backgroundRepeat = "no-repeat";
+        profileContainer.style.backgroundSize = "cover";
+        profileContainer.style.backgroundPosition = "left 15% top 25%";
+        profileContainer.style.color = "hotpink";
+        aboutMeContainer.style.backgroundColor = "rgba(5, 5, 106, 0.8)";
+        projectsContainer.style.backgroundColor = "black";
+        contactContainer.style.backgroundColor = "rgba(5, 5, 106, 0.8)";   
+        body.style.color = "white";
+
+}
+
+mLight.onclick = function () {
+        mNavList.hidden = true;
+        mModeSwitch.hidden = true;
+        body.style.backgroundColor = "";
+        profileContainer.style.backgroundImage = "";
+        profileContainer.style.backgroundRepeat = "";
+        profileContainer.style.backgroundSize = "";
+        profileContainer.style.color = "";
+        aboutMeContainer.style.backgroundColor = "";
+        projectsContainer.style.backgroundColor = "";
+        contactContainer.style.backgroundColor = ""; 
+        body.style.color = "";
+}
+
+
 

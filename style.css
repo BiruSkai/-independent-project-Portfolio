@@ -2,6 +2,7 @@ html{
         letter-spacing: 0.7px;
         line-height: 1.5rem;
         font-family: 'Lora', serif;
+        font-size: 25px;
 }
 
 body{
@@ -23,6 +24,59 @@ nav{
         top: 0;
         z-index: 1;
         margin: 0;
+}
+
+@media only screen and (max-width: 1080px) {
+        nav{
+               height: 7.5rem;
+        }
+}
+
+@media only screen and (min-width: 768px) {
+        #extr1-nav{
+                display: none;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+        nav{
+                display: none;
+        }
+
+        #extr1-nav{
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+        }
+
+        #mobile-navList{
+                flex-direction: column;
+                justify-content: center;
+        }
+
+        .material-symbols-outlined{
+                font-size: 2rem;
+        }
+
+}
+
+#nav-list{
+        position: absolute;
+        right: 8%;
+}
+
+@media only screen and (max-width: 1310px) and (min-width: 1080px) {
+        #nav-list{
+                right: 0%;
+        }
+}
+
+@media only screen and (max-width: 1080px) {
+        #nav-list{
+                flex-direction: column;
+                right: 10%
+        }
 }
 
 nav ul {
@@ -51,17 +105,25 @@ nav ul li{
         text-decoration: none;
 }
 
-nav img{
+#logoSwitch{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 10%;
+}
+
+@media only screen and (max-width: 1310px) {
+        #logoSwitch{
+                left: 0%;
+        }
+}
+
+#dark, #light, nav img{
+        font-weight: 800;
         height: 3.5rem;
         width: 3.5rem;
         margin: auto 2rem;
         border-radius: 70%;
-}
-
-#theme-switcher, #dark, #light{
-        padding: 0.6rem;
-        width: 5rem;
-        font-weight: 800;
 } 
 
 #dark{
@@ -78,43 +140,105 @@ nav img{
 /*About Me*/
 #container-profile{
         margin-top: 5.5rem;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/matrix.png");
-        color: white;
+        background-image: url("./images/bluesky.jpg");
+        background-position: left 50% top 50%;
+        color: grey;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         line-height: 2rem;
         opacity: 0.9;
-        height: 17rem;
+        height: 24rem;
         background-size: cover;
+}
+
+@media only screen and (max-width: 1080px) {
+        #container-profile{
+                margin-top: 7.5rem;
+        }
 }
 
 #profile h1{
         letter-spacing: 0.4rem;
         font-weight: 800;
-        mix-blend-mode: difference;
-        padding-bottom: 1rem;
+        mix-blend-mode:difference;
+}
+
+.profileData{
+        padding: 0.7rem;
+        line-height: 1.5rem;
+        left: 34%;
+}
+
+#extr1-profile{
+        display: none;
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1389px) {
+        .profileData{
+                left: 20%;
+        }
+       
+}
+
+@media only screen and (max-width: 1389px) {
+        .profileData{
+                left: 10%;
+        }
+       
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 1036px) {
+        .profileData{
+                left: 2%;
+        }
+       
+}
+
+@media only screen and (max-width: 1036px) {
+        .profileData{
+                display: none;
+        }
+
+        #extr1-profile{
+                display:contents;
+                text-align: center;
+                color: white;
+                mix-blend-mode: difference;
+                line-height: 1.5;
+                letter-spacing: 0.5rem;
+        }
 }
 
 #profile-intro{
         position: absolute;
-        left: 28rem;
+        border-left-style: dotted;
+        border-left-width: 0.4rem;
+        border-left-color:yellow;
+        border-top-style: dotted;
+        border-top-width: 0.4rem;
+        border-top-color: lightgreen;
+        padding-top: 0.4rem;
 }
 
 #profile-name{
         position: absolute;
-        left: 37rem;
+        
 }
 
 #biruskai{
         position:absolute;
-        left: 41rem;
         font-size: 1rem;
 }
 
 #profile-profession{
         position: absolute;
-        right: 29rem;
+        border-right-style: dotted;
+        border-right-width: 0.4rem;
+        border-right-color:lightgreen;
+        border-bottom-style: dotted;
+        border-bottom-width: 0.4rem;
+        border-bottom-color: yellow;
 }
 
 #container-about-me{
@@ -130,10 +254,28 @@ nav img{
 #about-me-text{
         text-align: justify;
         width: auto;
-        padding: 2rem;
+        padding: 2rem 14rem;
         margin: 0;
         font-size: 1.2rem;
         line-height: 2.0rem;
+}
+
+@media only screen and (max-width: 1389px) and (min-width: 1080px) {
+        #about-me-text{
+                padding: 2rem 7rem;
+        }
+}
+
+@media only screen and (max-width: 1080px) and ( min-width: 768px) {
+        #about-me-text{
+                padding: 2rem 7rem;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+        #about-me-text{
+                padding: 2rem 2rem;
+        }
 }
 
 /*Project*/
@@ -199,14 +341,19 @@ nav img{
         place-items: center;
 }
 
+@media only screen and (max-width: 1080px) {
+        #containerGridSkills{
+                grid-template-columns: repeat(2, 1fr);
+        }
+}
+
 #a,#b,#c,#d,#e {
         width: 10rem;
         height: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
-        margin: 2rem;
+        text-align: center;       
         font-weight: bolder;
 }
 
@@ -216,8 +363,26 @@ nav img{
 
 /*Contact*/
 #container-contact{
-        margin: 0 auto;
+        margin: 0 1rem;
         padding: 2rem 25rem;
+}
+
+@media only screen and (max-width: 1970px) and (min-width: 1600px) {
+        #container-contact{
+                padding: 2rem 15rem;
+        }
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1389px) {
+        #container-contact{
+                padding: 2rem 8rem;
+        }
+}
+
+@media only screen and (max-width: 1389px) {
+        #container-contact{
+                padding: 2rem 5rem;
+        }
 }
 
 #contact-container1{
@@ -230,11 +395,18 @@ nav img{
 }
 
 #contact-container2{
-        line-height: 2.5;
+        line-height: 3;
 }
 
 #contact-fullname{
         padding: 0 1rem;
+}
+
+.contactData{
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items:stretch ;
 }
 
 #name{
@@ -243,12 +415,14 @@ nav img{
 
 #contact-email-etc{
         padding: 0 1rem;
-        display: inline-flex;
-        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
 }
 
-#form-email{
-        margin-right: 0.6rem;
+@media only screen and (max-width: 972px) {
+        #contact-email-etc{
+                grid: auto/auto;
+        }
 }
 
 #contact-checkbox{
@@ -258,20 +432,29 @@ nav img{
 #message{
         display: flex;
         flex-direction: column;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 1rem;
+        border-radius: 1rem;
 }
 
 #name, #email, #phone, #country{
-        padding: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 10px;
+}
+
+@media only screen and (max-width: 972px) {
+        #name, #email, #phone, #country{
+                border-radius: 1px;
+        }
 }
 
 #contact-submit{
         padding: 0.8rem 1rem;
-        margin: 1rem;
+        margin: 0.5rem;
+        margin-left: 1.2rem;
         background-color: rgb(98, 214, 39);
         color: white;
         border-style: none;
-        
+        font-size: 1.2rem;
 }
 
 #contact-submit:hover{
@@ -280,21 +463,52 @@ nav img{
 }
 
 /*Footer*/
-footer{
-        background-color: black;
-        width: 100%;
-        height: 6rem;
-        margin:0;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+
+
+@media only screen and (min-width: 976px) {
+        #extr1-containerFooter{
+                display: none;
+        }
+
+        #containerFooter{
+                background-color: black;
+                width: 100%;
+                height: 6rem;
+                margin:0;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+        }
 }
 
-.footer-item{
+@media only screen and (max-width: 976px) {
+        #containerFooter{
+                display: none;
+        }
+
+        #extr1-containerFooter{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                align-items: center;
+                background-color: black;
+                color: white;
+        }
+}
+
+#copyright{
+        position: absolute;
+        left: 10%;
+}
+
+#socialmedia{
         display: flex;
+        position: absolute;
         align-items: center;
-        padding-left: 3rem;
+        margin-left: 3rem;
+        left: 44%;
 }
 
 footer img{
@@ -304,12 +518,6 @@ footer img{
         padding: 0 0.6rem;
 }
 
-
-#socialmedia{
-        position: relative;
-        left: 14rem;
-
-}
 #follow{
         margin: 0 1rem;
 }
