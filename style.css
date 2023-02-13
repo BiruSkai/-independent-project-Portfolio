@@ -2,7 +2,19 @@ html{
         letter-spacing: 0.7px;
         line-height: 1.5rem;
         font-family: 'Lora', serif;
-        font-size: 25px;
+        font-size:24px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 480px) {
+        html{
+                font-size: 16px;
+        }
+}
+
+@media only screen and (max-width: 480px) {
+        html{
+                font-size: 8px;
+        }
 }
 
 body{
@@ -22,7 +34,7 @@ nav{
         width: 100%;
         height: 5.5rem;
         top: 0;
-        z-index: 1;
+        z-index: 5;
         margin: 0;
 }
 
@@ -48,6 +60,9 @@ nav{
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-evenly;
+                position: fixed;
+                top: 0;
+                z-index: 3;
         }
 
         #mobile-navList{
@@ -62,8 +77,8 @@ nav{
 }
 
 #nav-list{
-        position: absolute;
-        right: 8%;
+        position: fixed;
+        right: 8% ;
 }
 
 @media only screen and (max-width: 1310px) and (min-width: 1080px) {
@@ -90,7 +105,7 @@ nav ul li a{
         color: white;
 }
 
-nav ul li a:hover{
+#nav-list a:hover{
         text-decoration: underline;
         color: greenyellow;
 }
@@ -108,7 +123,7 @@ nav ul li{
 #logoSwitch{
         display: flex;
         flex-direction: row;
-        position: absolute;
+        position: fixed;
         left: 10%;
 }
 
@@ -203,7 +218,7 @@ nav ul li{
         #extr1-profile{
                 display:contents;
                 text-align: center;
-                color: white;
+                color: black;
                 mix-blend-mode: difference;
                 line-height: 1.5;
                 letter-spacing: 0.5rem;
@@ -260,13 +275,7 @@ nav ul li{
         line-height: 2.0rem;
 }
 
-@media only screen and (max-width: 1389px) and (min-width: 1080px) {
-        #about-me-text{
-                padding: 2rem 7rem;
-        }
-}
-
-@media only screen and (max-width: 1080px) and ( min-width: 768px) {
+@media only screen and (max-width: 1389px) and (min-width: 768px) {
         #about-me-text{
                 padding: 2rem 7rem;
         }
@@ -298,6 +307,13 @@ nav ul li{
         justify-content: center;
 }
 
+@media only screen and (max-width: 480px) {
+        #container-project-item{
+                flex-direction:column;
+                align-items: center;
+        }
+}
+
 .project-item{
         text-align: center;
         width: 23rem;
@@ -326,7 +342,7 @@ nav ul li{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/matrix.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/matrix.png);
 }
 
 #skills{
@@ -341,9 +357,15 @@ nav ul li{
         place-items: center;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) and (min-width: 480px) {
         #containerGridSkills{
                 grid-template-columns: repeat(2, 1fr);
+        }
+}
+
+@media only screen and (max-width: 480px) {
+        #containerGridSkills{
+                grid-template-columns: auto;
         }
 }
 
